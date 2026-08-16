@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SKYLEAP — Creative Production House</title>
+<meta name="description" content="SKYLEAP is a creative production house that brings ideas to life through visual storytelling, strategic creativity, and innovative media." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <img class="brand" src="skyleap (1).png" alt="SKY LEAP" onclick="showPage('home')">
+    <ul class="nav-links" id="navLinks">
+      <li><a data-page="work" onclick="showPage('work')">Work</a></li>
+      <li><a data-page="capabilities" onclick="showPage('capabilities')">Capabilities</a></li>
+      <li><a data-page="about" onclick="showPage('about')">About</a></li>
+      <li><a data-page="team" onclick="showPage('team')">Team</a></li>
+      <li><a data-page="behind" onclick="showPage('behind')">Behind the Frame</a></li>
+    </ul>
+    <span class="nav-cta" onclick="showPage('contact')">Get in touch</span>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ===== HOME VIEW ===== -->
+<section class="view active" id="home">
+  <header class="hero" id="top">
+    <div class="hero-bg"></div>
+    <div class="wrap hero-inner">
+      <span class="eyebrow">Creative Production House</span>
+      <h1>From the first idea<br>to the <em>final frame,</em></h1>
+      <p class="lead">SKYLEAP brings ideas to life through visual storytelling, strategic creativity, and innovative media — delivering end-to-end creative solutions from concept to final delivery.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" onclick="showPage('work')">Explore our work <span class="arrow">→</span></button>
+        <button class="btn btn-ghost" id="heroShowreel">Watch showreel <span class="arrow">▸</span></button>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <span class="yr">Cibubur, Jakarta — Available Worldwide</span>
+      <span class="yr">Est. SKYLEAP</span>
+    </div>
+  </header>
+
+  <section style="padding-top:40px;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="left">
+          <span class="sec-num">— Explore</span>
+          <h2>What we do, who we are</h2>
+        </div>
+        <p class="desc">Pilih halaman untuk melihat detail karya, layanan, dan tim kami. Klik untuk membuka penjelasan lengkap beserta video.</p>
+      </div>
+
+      <div class="explore-grid">
+        <div class="explore-card wide reveal" onclick="showPage('work')">
+          <div class="explore-img"><img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&q=80" alt="Work"></div>
+          <div class="explore-body">
+            <span class="explore-num">01</span>
+            <h3>Selected Work</h3>
+            <p>A glimpse into the stories we've brought to life across video, AI, and brand visuals.</p>
+            <span class="explore-link">Explore work →</span>
+          </div>
+        </div>
+        <div class="explore-card reveal" onclick="showPage('capabilities')">
+          <div class="explore-img"><img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80" alt="Capabilities"></div>
+          <div class="explore-body">
+            <span class="explore-num">02</span>
+            <h3>Capabilities</h3>
+            <p>Five pillars covering the full spectrum of creative production.</p>
+            <span class="explore-link">Explore capabilities →</span>
+          </div>
+        </div>
+        <div class="explore-card reveal" onclick="showPage('about')">
+          <div class="explore-img"><img src="https://images.unsplash.com/photo-1502691876148-a84978e59af8?w=800&q=80" alt="About"></div>
+          <div class="explore-body">
+            <span class="explore-num">03</span>
+            <h3>About</h3>
+            <p>The story, vision, and values behind SKYLEAP.</p>
+            <span class="explore-link">Explore about →</span>
+          </div>
+        </div>
+        <div class="explore-card reveal" onclick="showPage('team')">
+          <div class="explore-img"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team"></div>
+          <div class="explore-body">
+            <span class="explore-num">04</span>
+            <h3>Team</h3>
+            <p>The creators, strategists, and craftspeople behind every frame.</p>
+            <span class="explore-link">Explore team →</span>
+          </div>
+        </div>
+        <div class="explore-card wide reveal" onclick="showPage('behind')">
+          <div class="explore-img"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&q=80" alt="Behind the Frame"></div>
+          <div class="explore-body">
+            <span class="explore-num">05</span>
+            <h3>Behind the Frame</h3>
+            <p>Process, making-of, and moments on set — the story before the story.</p>
+            <span class="explore-link">Explore behind →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="showreel" id="showreel">
+    <div class="showreel-frame reveal">
+      <video src="showreel/NOBU EPS 1 Final sub Indo.mp4" loop playsinline preload="metadata" poster="showreel/NOBU EPS 1 Final sub Indo.mp4"></video>
+      <div class="showreel-center">
+        <span class="showreel-label">See what we create</span>
+        <button class="play-btn" id="playShowreel" aria-label="Play showreel">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+        <span class="showreel-title">SKYLEAP Showreel</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="sec-num" style="display:block;margin-bottom:24px;">— Contact</span>
+        <h2>Have a story <em>to tell?</em></h2>
+        <p class="sub">Let's turn your idea into something worth seeing.</p>
+        <div class="contact-cta">
+          <a href="https://wa.me/6289525172504" class="btn btn-primary">Get in touch <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div class="contact-grid reveal">
+        <a href="https://wa.me/6289525172504" target="_blank" rel="noopener noreferrer" class="contact-cell">
+          <div class="lbl">WhatsApp</div>
+          <div class="val">0895-2517-2504</div>
+        </a>
+        <div class="contact-cell">
+          <div class="lbl">Email</div>
+          <div class="val">skyleap.id@gmail.com</div>
+        </div>
+        <a href="https://www.instagram.com/skyleap.id" target="_blank" rel="noopener noreferrer" class="contact-cell">
+          <div class="lbl">Instagram</div>
+          <div class="val">skyleap.id</div>
+        </a>
+        <a href="https://maps.app.goo.gl/39Bmw3LJ3x2uXVW37?g_st=aw" target="_blank" rel="noopener noreferrer" class="contact-cell">
+          <div class="lbl">Studio</div>
+          <div class="val">Cibubur, Jakarta Timur</div>
+        </a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ===== WORK PAGE ===== -->
+<section class="view" id="page-work">
+  <div class="page-hero">
+    <div class="wrap">
+      <button class="back-btn" onclick="showPage('home')">← Back to home</button>
+      <span class="sec-num">— 01 / Work</span>
+      <h1>Selected Work</h1>
+      <p>A glimpse into the stories we've brought to life across video, AI, and brand visuals. Each project is a journey — from the first idea to the final frame.</p>
+    </div>
+  </div>
+
+  <section style="padding-top:80px;">
+    <div class="wrap">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:40px;flex-wrap:wrap;">
+        <div class="work-filter reveal">
+          <button class="active" data-filter="all">All</button>
+          <button data-filter="video">Video</button>
+          <button data-filter="ai">AI</button>
+          <button data-filter="brand">Brand Visual</button>
+        </div>
+        <a href="https://www.instagram.com/skyleap.id/" target="_blank" rel="noopener noreferrer" class="ig-link reveal" style="font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all .3s var(--ease);">View Instagram <span style="transform:rotate(-45deg);display:inline-block;">↗</span></a>
+      </div>
+
+      <div class="work-grid" id="workGrid"></div>
+
+      <div class="instagram-section" id="instagramSection">
+        <div class="sec-head reveal" style="margin-bottom:26px;">
+          <div class="left">
+            <span class="sec-num">— Instagram</span>
+            <h2>Our latest work & visual stories</h2>
+          </div>
+          <p class="desc">Public updates from @skyleap.id</p>
+        </div>
+        <div class="brand-visual-grid" id="brandVisualGrid" aria-live="polite"></div>
+      </div>
+
+      <!-- Featured Videos -->
+      <div class="video-section">
+        <div class="sec-head reveal" style="margin-bottom:30px;">
+          <div class="left">
+            <span class="sec-num">— Featured Videos</span>
+            <h2>Watch our stories</h2>
+          </div>
+          <p class="desc">Beberapa video pilihan yang menampilkan pendekatan visual storytelling kami.</p>
+        </div>
+        <div class="video-grid">
+          <div class="video-card reveal" onclick="openVideoModal('showreel/Watch our stories/NOBU EPS 1 - TVC Campaign.mp4')">
+            <div class="video-thumb">
+              <video src="showreel/Watch our stories/NOBU EPS 1 - TVC Campaign.mp4" autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&q=80"></video>
+              <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+            <div class="video-info">
+              <span class="video-cat">TVC · Campaign</span>
+              <h4>Echoes of the City — Director's Cut</h4>
+            </div>
+          </div>
+          <div class="video-card reveal" onclick="openVideoModal('showreel/Watch our stories/LIMANI The Movie - AI.mp4')">
+            <div class="video-thumb">
+              <video src="showreel/Watch our stories/LIMANI The Movie - AI.mp4" autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?w=800&q=80"></video>
+              <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+            <div class="video-info">
+              <span class="video-cat">AI Film</span>
+              <h4>Synthetic Dreams — AI Short Film</h4>
+            </div>
+          </div>
+          <div class="video-card reveal" onclick="openVideoModal('showreel/Watch our stories/Documenter Nelayan - Documentary.mp4')">
+            <div class="video-thumb">
+              <video src="showreel/Watch our stories/Documenter Nelayan - Documentary.mp4" autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80"></video>
+              <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+            <div class="video-info">
+              <span class="video-cat">Documentary</span>
+              <h4>Beyond the Frame — Documentary</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-cta">
+        <h3>Have a project in mind?</h3>
+        <p>Let's create something worth seeing together.</p>
+        <button class="btn btn-primary" onclick="showPage('contact')">Get in touch <span class="arrow">→</span></button>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ===== CAPABILITIES PAGE ===== -->
+<section class="view" id="page-capabilities">
+  <div class="page-hero">
+    <div class="wrap">
+      <button class="back-btn" onclick="showPage('home')">← Back to home</button>
+      <span class="sec-num">— 02 / Capabilities</span>
+      <h1>Our Capabilities</h1>
+      <p>Five pillars covering the full spectrum of creative production — from the first idea to the final frame. Setiap pillar memiliki tim dan tools khusus untuk menjamin kualitas dari hulu ke hilir.</p>
+    </div>
+  </div>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <!-- 01 Video Production -->
+      <div class="cap-detail">
+        <div class="cap-detail-text">
+          <span class="cap-num">01</span>
+          <h3>Video Production</h3>
+          <p>Dari film, TVC/DVC, music video, company profile, hingga documentary — kami menangani seluruh proses produksi video dengan standar sinematik. Tim kami bekerja end-to-end: dari pre-production, shooting, hingga final delivery.</p>
+          <ul class="cap-list">
+            <li>Film</li>
+            <li>TVC / DVC</li>
+            <li>Music Video</li>
+            <li>Company Profile</li>
+            <li>Documentary</li>
+            <li>Commercial Content</li>
+          </ul>
+        </div>
+        <div class="cap-detail-video" onclick="openVideoModal('assets/video1.mp4')">
+          <video poster="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=900&q=80" muted loop playsinline></video>
+          <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor" style="width:52px;height:52px;color:var(--cream);"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+      </div>
+
+      <!-- 02 Creative Media & Marketing -->
+      <div class="cap-detail">
+        <div class="cap-detail-text">
+          <span class="cap-num">02</span>
+          <h3>Creative Media & Marketing</h3>
+          <p>Kami tidak hanya memproduksi konten, tapi juga merancang strategi kreatif yang berdampak. Dari creative campaign, social media management, hingga strategic media planning — semuanya terintegrasi untuk mencapai tujuan brand Anda.</p>
+          <ul class="cap-list">
+            <li>Creative Campaign</li>
+            <li>Social Media Campaign</li>
+            <li>Digital Content</li>
+            <li>Strategic Media Planning</li>
+            <li>Social Media Management</li>
+          </ul>
+        </div>
+        <div class="cap-detail-video" onclick="openVideoModal('assets/video5.mp4')">
+          <video poster="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=900&q=80" muted loop playsinline></video>
+          <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor" style="width:52px;height:52px;color:var(--cream);"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+      </div>
+
+      <!-- 03 Brand Visuals -->
+      <div class="cap-detail">
+        <div class="cap-detail-text">
+          <span class="cap-num">03</span>
+          <h3>Brand Visuals</h3>
+          <p>Visual identity yang kuat dimulai dari fotografi yang berkualitas. Kami menyediakan layanan commercial photography, product photography, portrait photography, dan visual content creation untuk membangun persepsi brand yang konsisten.</p>
+          <ul class="cap-list">
+            <li>Commercial Photography</li>
+            <li>Product Photography</li>
+            <li>Portrait Photography</li>
+            <li>Visual Content</li>
+          </ul>
+        </div>
+        <div class="cap-detail-video" onclick="openVideoModal('assets/video3.mp4')">
+          <video poster="https://images.unsplash.com/photo-1502691876148-a84978e59af8?w=900&q=80" muted loop playsinline></video>
+          <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor" style="width:52px;height:52px;color:var(--cream);"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+      </div>
+
+      <!-- 04 Post-Production -->
+      <div class="cap-detail">
+        <div class="cap-detail-text">
+          <span class="cap-num">04</span>
+          <h3>Post-Production</h3>
+          <p>Di sinilah frame mentah berubah menjadi karya final. Tim post-production kami menangani offline & online editing, color grading, motion graphics, 3D animation, music scoring, dan sound design — dengan perhatian detail pada setiap pixel dan frequency.</p>
+          <ul class="cap-list">
+            <li>Offline Editing</li>
+            <li>Online Editing</li>
+            <li>Color Grading</li>
+            <li>Motion Graphics</li>
+            <li>3D Animation</li>
+            <li>Music Scoring</li>
+            <li>Sound Design</li>
+          </ul>
+        </div>
+        <div class="cap-detail-video" onclick="openVideoModal('assets/video4.mp4')">
+          <video poster="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=900&q=80" muted loop playsinline></video>
+          <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor" style="width:52px;height:52px;color:var(--cream);"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+      </div>
+
+      <!-- 05 AI Solutions -->
+      <div class="cap-detail">
+        <div class="cap-detail-text">
+          <span class="cap-num">05</span>
+          <h3>AI Solutions</h3>
+          <p>SKYLEAP berdiri di garis depan revolusi AI dalam creative production. Dari AI film production, AI commercials, AI product visualization, hingga AI voice over dan content creation — kami memanfaatkan teknologi AI untuk membuka kemungkinan kreatif yang sebelumnya tidak tercapai.</p>
+          <ul class="cap-list">
+            <li>AI Film Production</li>
+            <li>AI Commercials</li>
+            <li>AI Product Visualization</li>
+            <li>AI Image Generation</li>
+            <li>AI Video Generation</li>
+            <li>AI Animation</li>
+            <li>AI Voice Over</li>
+            <li>AI Content Creation</li>
+          </ul>
+        </div>
+        <div class="cap-detail-video" onclick="openVideoModal('assets/video2.mp4')">
+          <video poster="https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?w=900&q=80" muted loop playsinline></video>
+          <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor" style="width:52px;height:52px;color:var(--cream);"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+      </div>
+
+      <div class="page-cta">
+        <h3>Need a specific capability?</h3>
+        <p>Kami siap membantu mewujudkan ide Anda dengan kombinasi layanan di atas.</p>
+        <button class="btn btn-primary" onclick="showPage('contact')">Get in touch <span class="arrow">→</span></button>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ===== ABOUT PAGE ===== -->
+<section class="view" id="page-about">
+  <div class="page-hero">
+    <div class="wrap">
+      <button class="back-btn" onclick="showPage('home')">← Back to home</button>
+      <span class="sec-num">— 03 / About</span>
+      <h1>We are <em>SKYLEAP</em></h1>
+      <p>A creative production house that brings ideas to life through visual storytelling, strategic creativity, and innovative media.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="content-block reveal">
+        <p><strong>SKYLEAP is a creative production house</strong> that brings ideas to life through visual storytelling, strategic creativity, and innovative media. We provide end-to-end creative solutions — from developing ideas and shaping creative concepts to production, post-production, and final delivery.</p>
+        <p>Our work spans film, TVC/DVC, music videos, company profiles, documentaries, AI movies, 3D animation, motion graphics, commercial photography, social media campaigns, and digital content. We believe every great frame starts with a great idea — and every great idea deserves the right craft to become real.</p>
+        <p>Di SKYLEAP, kami tidak hanya memproduksi konten. Kami membangun cerita, membentuk persepsi, dan menghadirkan pengalaman visual yang berdampak. Dari ide pertama hingga frame final, setiap proses dilakukan dengan perhatian pada detail, kualitas, dan inovasi.</p>
+      </div>
+
+      <div class="about-stats reveal">
+        <div class="stat"><div class="num">5</div><div class="lbl">Capability Pillars</div></div>
+        <div class="stat"><div class="num">100+</div><div class="lbl">Projects Delivered</div></div>
+        <div class="stat"><div class="num">∞</div><div class="lbl">Stories to Tell</div></div>
+      </div>
+
+      <!-- Values -->
+      <div style="margin-top:80px;">
+        <div class="sec-head reveal">
+          <div class="left">
+            <span class="sec-num">— Our Values</span>
+            <h2>What drives us</h2>
+          </div>
+          <p class="desc">Tiga prinsip fundamental yang menjadi fondasi setiap karya SKYLEAP.</p>
+        </div>
+        <div class="values-grid">
+          <div class="value-card reveal">
+            <div class="icon">i</div>
+            <h4>Visual Storytelling</h4>
+            <p>Setiap frame adalah bab dalam cerita yang lebih besar. Kami memastikan visual bukan hanya indah, tapi bermakna.</p>
+          </div>
+          <div class="value-card reveal">
+            <div class="icon">ii</div>
+            <h4>Strategic Creativity</h4>
+            <p>Kreativitas tanpa strategi adalah seni tanpa arah. Kami menggabungkan keduanya untuk hasil yang berdampak.</p>
+          </div>
+          <div class="value-card reveal">
+            <div class="icon">iii</div>
+            <h4>Innovative Media</h4>
+            <p>Kami selalu mencari cara baru — termasuk memanfaatkan AI dan teknologi terkini — untuk menceritakan kisah dengan lebih baik.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Video -->
+      <div class="video-section">
+        <div class="sec-head reveal" style="margin-bottom:30px;">
+          <div class="left">
+            <span class="sec-num">— Studio Film</span>
+            <h2>Inside SKYLEAP</h2>
+          </div>
+          <p class="desc">Kenali lebih dekat studio, filosofi kerja, dan tim kami.</p>
+        </div>
+        <div class="video-grid">
+          <div class="video-card reveal" onclick="openVideoModal('assets/video8.mp4')">
+            <div class="video-thumb">
+              <video poster="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" muted loop playsinline></video>
+              <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+            <div class="video-info">
+              <span class="video-cat">Studio Profile</span>
+              <h4>Inside SKYLEAP — Studio Film</h4>
+            </div>
+          </div>
+          <div class="video-card reveal" onclick="openVideoModal('assets/video9.mp4')">
+            <div class="video-thumb">
+              <video poster="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&q=80" muted loop playsinline></video>
+              <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+            <div class="video-info">
+              <span class="video-cat">Philosophy</span>
+              <h4>Why We Create — Manifesto</h4>
+            </div>
+          </div>
+          <div class="video-card reveal" onclick="openVideoModal('assets/video10.mp4')">
+            <div class="video-thumb">
+              <video poster="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80" muted loop playsinline></video>
+              <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+            <div class="video-info">
+              <span class="video-cat">Journey</span>
+              <h4>From First Idea to Final Frame</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-cta">
+        <h3>Want to work with us?</h3>
+        <p>Mari diskusikan bagaimana kami bisa membantu mewujudkan ide Anda.</p>
+        <button class="btn btn-primary" onclick="showPage('contact')">Get in touch <span class="arrow">→</span></button>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ===== TEAM PAGE ===== -->
+<section class="view" id="page-team">
+  <div class="page-hero">
+    <div class="wrap">
+      <button class="back-btn" onclick="showPage('home')">← Back to home</button>
+      <span class="sec-num">— 04 / Team</span>
+      <h1>The minds behind <em>SKYLEAP</em></h1>
+      <p>A collective of creators, strategists, and technicians — each bringing their own craft to every frame. Kenali orang-orang yang membentuk setiap karya SKYLEAP.</p>
+    </div>
+  </div>
+
+  <section style="padding-top:80px;">
+    <div class="wrap">
+      <div class="team-detail-grid">
+        <div class="team-detail-card reveal">
+          <div class="team-detail-photo"><img src="foto/FOUNDER.jpeg" alt="Duanda Juan Nauval"></div>
+          <div class="team-detail-body">
+            <div class="role">Founder</div>
+            <h3>Duanda Juan Nauval</h3>
+            <p>Creative director yang membentuk visi di balik setiap frame SKYLEAP. Dengan background di film dan advertising, Arya memimpin dari konsep hingga final delivery, memastikan setiap proyek memiliki narasi yang kuat dan eksekusi yang presisi.</p>
+            <div class="meta">Selected: <span>Echoes of the City</span> · <span>Synthetic Dreams</span></div>
+          </div>
+        </div>
+
+        <div class="team-detail-card reveal">
+          <div class="team-detail-photo"><img src="foto/Co-FOUNDER.jpeg" alt="Tamir Juan Akbar"></div>
+          <div class="team-detail-body">
+            <div class="role">Co-Founder</div>
+            <h3>Tamir Juan Akbar</h3>
+            <p>Memimpin strategic creativity dan brand storytelling across campaigns dan digital content. Reza percaya bahwa setiap brand memiliki cerita yang unik — tugas kami adalah menemukan cara terbaik untuk menceritakannya.</p>
+            <div class="meta">Selected: <span>Future Forward</span> · <span>Form & Light</span></div>
+          </div>
+        </div>
+
+        <div class="team-detail-card reveal">
+          <div class="team-detail-photo"><img src="foto/Operational Director.jpg" alt="Zidan Verdian Windoe"></div>
+          <div class="team-detail-body">
+            <div class="role">Operational Director</div>
+            <h3>Zidan Verdian Windoe</h3>
+            <p>Menjaga produksi berjalan end-to-end, Nadia mengorkestrasi crew, timeline, dan creative delivery. Pengalamannya di production management memastikan setiap proyek selesai tepat waktu dengan kualitas yang konsisten.</p>
+            <div class="meta">Selected: <span>Beyond the Frame</span> · <span>Future Forward</span></div>
+          </div>
+        </div>
+
+        <div class="team-detail-card reveal">
+          <div class="team-detail-photo"><img src="foto/Post Production Lead.jpg" alt="Bayu Nurhamdan"></div>
+          <div class="team-detail-body">
+            <div class="role">Post-Production Lead</div>
+            <h3>Bayu Nurhamdan</h3>
+            <p>Craftsman di bidang color, motion, dan sound — di mana frame mentah berubah menjadi karya final. Satria memiliki perhatian detail yang obsesif pada setiap pixel dan frequency, memastikan output selalu premium.</p>
+            <div class="meta">Selected: <span>Velvet Static</span> · <span>The Maker's Portrait</span></div>
+          </div>
+        </div>
+
+        <div class="team-detail-card reveal">
+          <div class="team-detail-photo"><img src="foto/IT- Team 1.png" alt="Muhammad Fhauzi Nugraha"></div>
+          <div class="team-detail-body">
+            <div class="role">IT Team</div>
+            <h3>Muhammad Fhauzi Nugraha</h3>
+            <p>Creative director yang membentuk visi di balik setiap frame SKYLEAP. Dengan background di film dan advertising, Arya memimpin dari konsep hingga final delivery, memastikan setiap proyek memiliki narasi yang kuat dan eksekusi yang presisi.</p>
+            <div class="meta">Selected: <span>Echoes of the City</span> · <span>Synthetic Dreams</span></div>
+          </div>
+        </div>
+
+        <div class="team-detail-card reveal">
+          <div class="team-detail-photo"><img src="foto/IT- Team 3.png" alt="Kafka Navisha Nugraha Favian"></div>
+          <div class="team-detail-body">
+            <div class="role">IT Team</div>
+            <h3>Kafka Navisha Nugraha Favian</h3>
+            <p>Menjaga produksi berjalan end-to-end, Nadia mengorkestrasi crew, timeline, dan creative delivery. Pengalamannya di production management memastikan setiap proyek selesai tepat waktu dengan kualitas yang konsisten.</p>
+            <div class="meta">Selected: <span>Beyond the Frame</span> · <span>Future Forward</span></div>
+          </div>
+        </div>
+
+        <div class="team-detail-card reveal">
+          <div class="team-detail-photo"><img src="foto/IT- Team 2.png" alt="Muhammad Fhauzan Nugraha"></div>
+          <div class="team-detail-body">
+            <div class="role">IT Team</div>
+            <h3>Muhammad Fhauzan Nugraha</h3>
+            <p>Craftsman di bidang color, motion, dan sound — di mana frame mentah berubah menjadi karya final. Satria memiliki perhatian detail yang obsesif pada setiap pixel dan frequency, memastikan output selalu premium.</p>
+            <div class="meta">Selected: <span>Velvet Static</span> · <span>The Maker's Portrait</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Video -->
+      <div class="video-section">
+        <div class="sec-head reveal" style="margin-bottom:30px;">
+          <div class="left">
+            <span class="sec-num">— Team in Action</span>
+            <h2>Watch us work</h2>
+          </div>
+          <p class="desc">Beberapa video yang menampilkan tim SKYLEAP dalam aksi.</p>
+        </div>
+        <div class="video-grid">
+          <div class="video-card reveal" onclick="openVideoModal('assets/video11.mp4')">
+            <div class="video-thumb">
+              <video poster="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" muted loop playsinline></video>
+              <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+            <div class="video-info">
+              <span class="video-cat">Team Culture</span>
+              <h4>A Day at SKYLEAP</h4>
+            </div>
+          </div>
+          <div class="video-card reveal" onclick="openVideoModal('assets/video12.mp4')">
+            <div class="video-thumb">
+              <video poster="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80" muted loop playsinline></video>
+              <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+            <div class="video-info">
+              <span class="video-cat">On Set</span>
+              <h4>Directors at Work</h4>
+            </div>
+          </div>
+          <div class="video-card reveal" onclick="openVideoModal('assets/video13.mp4')">
+            <div class="video-thumb">
+              <video poster="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&q=80" muted loop playsinline></video>
+              <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+            <div class="video-info">
+              <span class="video-cat">Post-Production</span>
+              <h4>Inside the Edit Bay</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-cta">
+        <h3>Want to join the team?</h3>
+        <p>Kami selalu terbuka untuk talenta kreatif yang ingin tumbuh bersama.</p>
+        <button class="btn btn-primary" onclick="showPage('contact')">Get in touch <span class="arrow">→</span></button>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ===== BEHIND THE FRAME PAGE ===== -->
+<section class="view" id="page-behind">
+  <div class="page-hero">
+    <div class="wrap">
+      <button class="back-btn" onclick="showPage('home')">← Back to home</button>
+      <span class="sec-num">— 05 / Behind the Frame</span>
+      <h1>Behind the <em>Frame</em></h1>
+      <p>Setiap frame yang Anda lihat memiliki cerita sebelum menjadi frame. Inilah proses, moment, dan orang-orang di balik layar yang membuat setiap karya SKYLEAP menjadi nyata.</p>
+    </div>
+  </div>
+
+  <section style="padding-top:80px;">
+    <div class="wrap">
+      <!-- Process -->
+      <div class="sec-head reveal">
+        <div class="left">
+          <span class="sec-num">— Our Process</span>
+          <h2>From idea to frame</h2>
+        </div>
+        <p class="desc">Tiga tahap utama yang dilalui setiap proyek SKYLEAP.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step reveal">
+          <span class="step-num">i</span>
+          <h4>Pre-Production</h4>
+          <p>Concept development, brainstorming, storyboard, location scouting, casting, dan production planning. Di sinilah ide lahir dan matang sebelum kamera mulai berputar.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="step-num">ii</span>
+          <h4>Production</h4>
+          <p>Shooting dengan crew profesional, equipment sinematik, dan attention to detail. Setiap frame direncanakan, dieksekusi, dan dikontrol di lokasi.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="step-num">iii</span>
+          <h4>Post-Production</h4>
+          <p>Editing, color grading, motion graphics, sound design, dan final delivery. Di sinilah frame mentah berubah menjadi karya final yang siap dilihat dunia.</p>
+        </div>
+      </div>
+
+      <!-- Making-of Videos -->
+      <div class="video-section">
+        <div class="sec-head reveal" style="margin-bottom:30px;">
+          <div class="left">
+            <span class="sec-num">— Making Of</span>
+            <h2>Behind the Frame Video</h2>
+          </div>
+          <p class="desc">Beberapa video making-of yang menampilkan proses di balik karya SKYLEAP.</p>
+        </div>
+        <div class="video-grid">
+          <div class="video-card reveal" onclick="openVideoModal('BTS/Behind The Scene Rena Gulana.mp4')">
+            <div class="video-thumb">
+              <video poster="BTS/Screenshot (1108).png" muted loop playsinline></video>
+              <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+            <div class="video-info">
+            </div>
+          </div>
+          <div class="video-card reveal" onclick="openVideoModal('BTS/BTS VIDEO - HENDRI DAN KEBETULANNYA.mp4')">
+            <div class="video-thumb">
+              <video poster="BTS/Screenshot (1109).png" muted loop playsinline></video>
+              <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+            <div class="video-info">
+            </div>
+          </div>
+          <div class="video-card reveal" onclick="openVideoModal('BTS/janji.mp4')">
+            <div class="video-thumb">
+              <video poster="BTS/Screenshot (1110).png" muted loop playsinline></video>
+              <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+            <div class="video-info">
+            </div>
+          </div>
+          <div class="video-card reveal" onclick="openVideoModal('BTS/WhatsApp Video 2025-01-13 at 22.48.34.mp4')">
+            <div class="video-thumb">
+              <video poster="BTS/Screenshot (1112).png" muted loop playsinline></video>
+              <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+            <div class="video-info">
+            </div>
+          </div>
+          <div class="video-card reveal" onclick="openVideoModal('BTS/WhatsApp Video 2026-08-16 at 12.18.58.mp4')">
+            <div class="video-thumb">
+              <video poster="BTS/Screenshot (1113).png" muted loop playsinline></video>
+              <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+            <div class="video-info">
+            </div>
+          </div>
+          <div class="video-card reveal" onclick="openVideoModal('BTS/WhatsApp Video 2026-08-16 at 12.20.38.mp4')">
+            <div class="video-thumb">
+              <video poster="BTS/Screenshot (1114).png" muted loop playsinline></video>
+              <div class="play-overlay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+            <div class="video-info">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery -->
+      <div style="margin-top:80px;">
+        <div class="sec-head reveal">
+          <div class="left">
+            <span class="sec-num">— On Set</span>
+            <h2>Behind The Scenes Foto</h2>
+          </div>
+          <p class="desc">Cuplikan-cuplikan dari lokasi syuting dan studio SKYLEAP.</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item reveal"><img src="BTS/BTS00387.JPG" alt="On set 1"></div>
+          <div class="gallery-item reveal"><img src="BTS/BTS00496.JPG" alt="On set 2"></div>
+          <div class="gallery-item reveal"><img src="BTS/DAY ONE EP. 1-16.jpg" alt="On set 3"></div>
+          <div class="gallery-item reveal"><img src="BTS/DAY ONE EP. 1-46.jpg" alt="On set 4"></div>
+          <div class="gallery-item reveal"><img src="BTS/DAY TWO EP. 1-156.jpg" alt="On set 5"></div>
+          <div class="gallery-item reveal"><img src="BTS/DAY TWO EP. 1-34.jpg" alt="On set 6"></div>
+          <div class="gallery-item reveal"><img src="BTS/DAY TWO EP. 1-72.jpg" alt="On set 7"></div>
+          <div class="gallery-item reveal"><img src="BTS/DJN01636.JPG" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/DJN01747.JPG" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/DJN01764 (1).JPG" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/NOBU BTS EP 2-46.jpg" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/WhatsApp Image 2025-01-11 at 21.38.52.jpeg" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/WhatsApp Image 2025-01-11 at 21.38.53.jpeg" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/WhatsApp Image 2025-01-11 at 21.38.53 (1).jpeg" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/WhatsApp Image 2025-01-11 at 21.38.54 (1).jpeg" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/WhatsApp Image 2025-01-11 at 21.38.54 (2).jpeg" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/WhatsApp Image 2025-01-11 at 21.38.54.jpeg" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/WhatsApp Image 2025-01-11 at 21.38.55 (1).jpeg" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/WhatsApp Image 2025-01-11 at 21.38.55.jpeg" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/WhatsApp Image 2026-08-16 at 11.44.07.jpeg" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/WhatsApp Image 2026-08-16 at 11.49.11.jpeg" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/WhatsApp Image 2026-08-16 at 11.49.47.jpeg" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/WhatsApp Image 2026-08-16 at 12.18.30.jpeg" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/WhatsApp Image 2026-08-16 at 12.18.39.jpeg" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/WhatsApp Image 2026-08-16 at 12.18.48.jpeg" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/WhatsApp Image 2026-08-16 at 12.21.22.jpeg" alt="On set 8"></div>
+          <div class="gallery-item reveal"><img src="BTS/WhatsApp Image 2026-08-16 at 12.22.03.jpeg" alt="On set 8"></div>
+        </div>
+      </div>
+
+      <div class="page-cta">
+        <h3>Want to see more?</h3>
+        <p>Hubungi kami untuk diskusi tentang proses kerja dan portofolio lengkap.</p>
+        <button class="btn btn-primary" onclick="showPage('contact')">Get in touch <span class="arrow">→</span></button>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img class="brand" src="skyleap (1).png" alt="SKY LEAP" onclick="showPage('home')">
+        <p>A creative production house that brings ideas to life through visual storytelling, strategic creativity, and innovative media.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a onclick="showPage('work')">Work</a></li>
+          <li><a onclick="showPage('capabilities')">Capabilities</a></li>
+          <li><a onclick="showPage('about')">About</a></li>
+          <li><a onclick="showPage('team')">Team</a></li>
+          <li><a onclick="showPage('behind')">Behind the Frame</a></li>
+          <li><a onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a onclick="showPage('capabilities')">Video Production</a></li>
+          <li><a onclick="showPage('capabilities')">Brand Visuals</a></li>
+          <li><a onclick="showPage('capabilities')">Post-Production</a></li>
+          <li><a onclick="showPage('capabilities')">AI Solutions</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/skyleap.id" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://wa.me/6289525172504" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="mailto:hello@skyleap.id">Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 SKYLEAP</span>
+      <span class="tag">From the first idea to the final frame.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <button class="modal-close" id="modalClose">✕</button>
+  <div class="modal-box">
+    <video id="modalVideo" controls playsinline preload="metadata">
+      <source id="modalVideoSource" src="showreel/NOBU EPS 1 Final sub Indo.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<!-- BRAND VISUAL MODAL -->
+<div class="modal" id="brandVisualModal">
+  <button class="modal-close" id="brandVisualModalClose">✕</button>
+  <div class="modal-box brand-modal-box">
+    <img id="brandVisualModalImg" src="" alt="Brand visual" />
+    <div class="brand-modal-info">
+      <div class="brand-modal-name" id="brandModalName"></div>
+      <div class="brand-modal-title" id="brandModalTitle"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
